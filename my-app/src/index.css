@@ -1,12 +1,12 @@
 :root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
+  --text: #964B00;
+  --text-h: #E2725B;
+  --bg: #FFFDD0;
+  --border: #FFFDD0;
   --code-bg: #f4f3ec;
-  --accent: #aa3bff;
+  --accent: #000000;
   --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
+  --accent-border: rgba(0, 0, 0, 0.5);
   --social-bg: rgba(244, 243, 236, 0.5);
   --shadow:
     rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
@@ -37,9 +37,9 @@
     --bg: #16171d;
     --border: #2e303a;
     --code-bg: #1f2028;
-    --accent: #c084fc;
+    --accent: #000000;
     --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
+    --accent-border: rgba(0, 0, 0, 0.5);
     --social-bg: rgba(47, 48, 58, 0.5);
     --shadow:
       rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
@@ -108,4 +108,24 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
+}
+
+.nav-link:hover {
+  font-weight: bold;
+}
+
+.recipe-link:hover {
+  font-weight: bold;
+}
+
+.ingredients-link:hover {
+  font-weight: bold;
+}
+
+.home-link:hover {
+  font-weight: bold;
+}
+
+.search-button {
+  border: 2px solid #964B00;
 }
