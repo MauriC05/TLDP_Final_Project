@@ -17,3 +17,15 @@ export async function getRecipesByIngredients(ingredients: string[]) {
 
   return response.json();
 }
+
+export async function getIngredientSuggestions(query: string) {
+
+  const url =
+    `https://api.spoonacular.com/food/ingredients/autocomplete?query=${query}` +
+    `&apiKey=${API_KEY}`;
+
+  const response = await fetch(url);
+  if (!response.ok) throw new Error(`API error: ${response.status}`);
+
+  return response.json();
+}

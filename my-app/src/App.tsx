@@ -14,27 +14,26 @@ function App() {
     <Navbar />
       <section id="center">
         <div className="hero">
-          {/*<img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-          <img src={recipe} alt="Recipe" width="300" height="179" />*/}
-    
         </div>
         <div>
           <h1 style={{marginRight: '750px', fontFamily: '"Playwrite IE", cursive'}}>Cuisine-ator</h1>
           <p style={{marginRight: '700px', fontFamily: '"Playwrite IE", cursive'}}>
             Find delicious recipes for any occasion!</p>
-            <img src={recipe} alt="Recipe" width="350" height="225" style={{ float: 'left', marginTop: '50px', borderRadius: '12px' }}/>
-            <img src={ingredients} alt="Ingredients" width="350" height="225" style={{ marginTop: '50px', borderRadius: '12px' }}/>
-            <img src={storedfood} alt="Stored Food" width="350" height="225" style={{ float: 'right', marginTop: '50px', borderRadius: '12px'}}/>
-            <Link className="recipe-link" style={{textDecoration: 'none', color: '#964B00', float: 'left', marginLeft: '90px'}} to="/ingredients">Find My Next Recipe</Link>
-            <Link className="ingredients-link" style={{textDecoration: 'none', color: '#964B00', float: 'left', marginLeft: '200px'}} to="/ingredientsearch">Find Ingredients Near Me</Link>
+            <div style={{ display: 'flex' , gap: '40px'}}>
+              <div style={{ position: 'relative' }}>
+              <img src={recipe} alt="Recipe" width="350" height="225" style={{ marginTop: '50px', borderRadius: '12px' }} />
+                <Link className="recipe-link" style={{textDecoration: 'none', color: '#001aff', position: 'absolute', fontSize: '30px', top: '0', left: '0', width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}} to="/ingredients">Find My Next Recipe</Link>
+              </div>
+              <div style={{ position: 'relative' }}>
+              <img src={ingredients} alt="Ingredients" width="350" height="225" style={{ marginTop: '50px', borderRadius: '12px' }}/>
+                <Link className="ingredients-link" style={{textDecoration: 'none', color: '#001aff', position: 'absolute', fontSize: '30px', top: '0', left: '0', width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}} to="/ingredientsearch">Find Ingredients Near Me</Link>
+              </div>
+              <div style={{ position: 'relative' }}>
+              <img src={storedfood} alt="Stored Food" width="350" height="225" style={{ marginTop: '50px', borderRadius: '12px'}}/>
+                <Link className="pantry-link" style={{textDecoration: 'none', color: '#001aff', position: 'absolute', fontSize: '30px', top: '0', left: '0', width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}} to="/pantry">Look At My Ingredients</Link>
+              </div>
+            </div>
         </div>
-        {/*<button
-          className="counter"
-          onClick={() => setCount((count) => count + 3)}>
-          Count is {count}
-        </button>*/}
       </section>
 
       <div className="ticks"></div>
