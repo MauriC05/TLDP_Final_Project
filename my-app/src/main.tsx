@@ -5,6 +5,7 @@ import './index.css'
 import App from './App.tsx'
 import Ingredients from './Ingredients.tsx'
 import IngredientSearch from './IngredientSearch.tsx'
+import Pantry from './Pantry.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -25,6 +26,19 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/" element={<App />} />
         <Route path="/Ingredients" element={<Ingredients />} />
         <Route path="/IngredientSearch" element={<IngredientSearch />} />
+      </Routes>
+    </BrowserRouter>
+  </StrictMode>,
+)
+
+createRoot(document.getElementById('root')!).render(
+  <StrictMode>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/Ingredients" element={<Ingredients />} />
+        <Route path="/IngredientSearch" element={<IngredientSearch />} />
+        <Route path="/Pantry" element={<Pantry />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,
