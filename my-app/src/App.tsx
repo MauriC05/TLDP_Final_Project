@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import recipe from './assets/recipe.jpg'
-import ingredients from './assets/ingredients.avif'
-import storedfood from './assets/storedfood.jpg'
+import ingredients from './assets/ingredients.png'
+import storedfood from './assets/storedfood.webp'
 import './App.css'
 import { Link } from 'react-router-dom'
 import Navbar from './Navbar'
@@ -22,15 +22,15 @@ function App() {
             <div style={{ display: 'flex' , gap: '40px'}}>
               <div style={{ position: 'relative' }}>
               <img src={recipe} alt="Recipe" width="350" height="225" style={{ marginTop: '50px', borderRadius: '12px' }} />
-                <Link className="recipe-link" style={{textDecoration: 'none', color: '#001aff', position: 'absolute', fontSize: '30px', top: '0', left: '0', width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}} to="/ingredients">Find My Next Recipe</Link>
+                <Link className="recipe-link" style={{textDecoration: 'none', color: '#000000', position: 'absolute', fontSize: '30px', top: '0', left: '0', width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}} to="/ingredients">Find My Next Recipe</Link>
               </div>
               <div style={{ position: 'relative' }}>
               <img src={ingredients} alt="Ingredients" width="350" height="225" style={{ marginTop: '50px', borderRadius: '12px' }}/>
-                <Link className="ingredients-link" style={{textDecoration: 'none', color: '#001aff', position: 'absolute', fontSize: '30px', top: '0', left: '0', width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}} to="/ingredientsearch">Find Ingredients Near Me</Link>
+                <Link className="ingredients-link" style={{textDecoration: 'none', color: '#000000', position: 'absolute', fontSize: '30px', top: '0', left: '0', width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}} to="/ingredientsearch">Find Ingredients Near Me</Link>
               </div>
               <div style={{ position: 'relative' }}>
               <img src={storedfood} alt="Stored Food" width="350" height="225" style={{ marginTop: '50px', borderRadius: '12px'}}/>
-                <Link className="pantry-link" style={{textDecoration: 'none', color: '#001aff', position: 'absolute', fontSize: '30px', top: '0', left: '0', width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}} to="/pantry">Look At My Ingredients</Link>
+                <Link className="pantry-link" style={{textDecoration: 'none', color: '#000000', position: 'absolute', fontSize: '30px', top: '0', left: '0', width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}} to="/pantry">Look At My Ingredients</Link>
               </div>
             </div>
         </div>
