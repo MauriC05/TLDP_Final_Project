@@ -1,5 +1,5 @@
 const GROQ_KEY = import.meta.env.VITE_GROQ_KEY
-console.log('GROQ KEY:', GROQ_KEY)
+
 
 export async function getRecipeInstructions(recipeName: string, usedIngredients: string[], missedIngredients: string[]) {
   const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {

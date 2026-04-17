@@ -1,5 +1,5 @@
 const API_KEY = import.meta.env.VITE_SPOONACULAR_KEY;
-console.log('API KEY:', API_KEY); // add this line
+
 
 export async function getRecipesByIngredients(ingredients: string[]) {
   const ingredientList = ingredients.join(",");
