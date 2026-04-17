@@ -21,7 +21,7 @@ function Ingredients() {
 
   
   const handleSearch = async () => {
-    const ingredients = input.split(',').map((i) => i.trim()).filter(Boolean)
+    const ingredients = addedIngredients
     if (!ingredients.length) return
 
     setLoading(true)
@@ -49,7 +49,7 @@ function Ingredients() {
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <input
       
-        style={{ width: '500px', height: '50px', marginTop: '50px', fontFamily: 'Times New Roman', fontSize: '24px' }}
+        style={{ width: '500px', height: '50px', marginTop: '50px', fontFamily: 'Times New Roman', fontSize: '24px', cursor: 'text' }}
         placeholder="Type an ingredient..."
         value={input}
         onChange={handleInputChange}
@@ -68,6 +68,25 @@ function Ingredients() {
     ))}
       </ul>
     )}
+
+    <h2 style={{ fontFamily: '"Playwrite IE", cursive', marginTop: '20px' }}>Added Ingredients</h2>
+
+    <ul>
+    {addedIngredients.map((ingredient, index) => (
+    <li key={index}>{ingredient}
+    <button
+        style={{
+           outline: 'none', marginLeft: '10px',
+           backgroundColor: '#FFFDD0', fontFamily: 'Times New Roman', color: '#964B00',
+          borderColor: '#964B00', border: '1px solid #964B00', cursor: 'pointer'
+        }}
+        onClick={() => setAddedIngredients(addedIngredients.filter((_, i) => i !== index))}
+      >
+        {'X'}
+      </button>
+    </li>
+    ))}
+    </ul>
 
       <button
         style={{
