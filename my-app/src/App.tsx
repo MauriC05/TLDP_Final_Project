@@ -1,10 +1,12 @@
 import { useState } from 'react'
-import recipe from './assets/recipe.jpg'
-import ingredients from './assets/ingredients.avif'
-import storedfood from './assets/storedfood.jpg'
+import recipe from './assets/chicken salad icon.jpg'
+import ingredients from './assets/ingredient icon.png'
+import storedfood from './assets/storage food.webp'
+import webicon from './assets/webicon.png'
 import './App.css'
 import { Link } from 'react-router-dom'
 import Navbar from './Navbar'
+import { motion } from 'framer-motion'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,21 +18,45 @@ function App() {
         <div className="hero">
         </div>
         <div>
-          <h1 style={{marginRight: '750px', fontFamily: '"Playwrite IE", cursive'}}>Cuisine-ator</h1>
-          <p style={{marginRight: '700px', fontFamily: '"Playwrite IE", cursive'}}>
-            Find delicious recipes for any occasion!</p>
+          <div>
+            <img src={webicon} alt="Web Icon" width="200" height="200" style={{ marginTop: '50px', borderRadius: '50%' }} />
+          <motion.h1 style={{ fontFamily: '"Playwrite IE", cursive', fontWeight: 'bold' }}>
+            {"Cuisine-ator".split("").map((letter, index) => (
+              <motion.span
+                key={index}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.1, delay: index * 0.1 }}
+              >
+                {letter}
+              </motion.span>
+            ))} 
+          </motion.h1> 
+          </div>
+          <motion.p style={{ fontFamily: '"Playwrite IE", cursive'}}>
+            {"Find delicious recipes for any occasion!".split("").map((letter, index) => (
+              <motion.span
+                key={index}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.1, delay: index * 0.1 }}
+              >
+                {letter}
+              </motion.span>
+            ))}
+          </motion.p>
             <div style={{ display: 'flex' , gap: '40px'}}>
               <div style={{ position: 'relative' }}>
               <img src={recipe} alt="Recipe" width="350" height="225" style={{ marginTop: '50px', borderRadius: '12px' }} />
-                <Link className="recipe-link" style={{textDecoration: 'none', color: '#001aff', position: 'absolute', fontSize: '30px', top: '0', left: '0', width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}} to="/ingredients">Find My Next Recipe</Link>
+                <Link className="recipe-link" style={{textDecoration: 'none', color: '#000000', position: 'absolute', fontSize: '30px', top: '0', left: '0', width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}} to="/ingredients">Find My Next Recipe</Link>
               </div>
               <div style={{ position: 'relative' }}>
               <img src={ingredients} alt="Ingredients" width="350" height="225" style={{ marginTop: '50px', borderRadius: '12px' }}/>
-                <Link className="ingredients-link" style={{textDecoration: 'none', color: '#001aff', position: 'absolute', fontSize: '30px', top: '0', left: '0', width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}} to="/ingredientsearch">Find Ingredients Near Me</Link>
+                <Link className="ingredients-link" style={{textDecoration: 'none', color: '#000000', position: 'absolute', fontSize: '30px', top: '0', left: '0', width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}} to="/ingredientsearch">Find Ingredients Near Me</Link>
               </div>
               <div style={{ position: 'relative' }}>
               <img src={storedfood} alt="Stored Food" width="350" height="225" style={{ marginTop: '50px', borderRadius: '12px'}}/>
-                <Link className="pantry-link" style={{textDecoration: 'none', color: '#001aff', position: 'absolute', fontSize: '30px', top: '0', left: '0', width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}} to="/pantry">Look At My Ingredients</Link>
+                <Link className="pantry-link" style={{textDecoration: 'none', color: '#000000', position: 'absolute', fontSize: '30px', top: '0', left: '0', width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}} to="/pantry">Look At My Ingredients</Link>
               </div>
             </div>
         </div>
