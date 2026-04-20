@@ -1,16 +1,8 @@
-import { useState } from 'react'
-import recipe from './assets/chicken salad icon.jpg'
-import ingredients from './assets/ingredient icon.png'
-import storedfood from './assets/storage food.webp'
-import background from './assets/background.jpg'
-import background2 from './assets/background2.jpg'
 import './App.css'
 import { Link } from 'react-router-dom'
 import Navbar from './Navbar'
-import { motion } from 'framer-motion'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
