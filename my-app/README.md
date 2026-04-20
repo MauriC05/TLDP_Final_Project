@@ -1,15 +1,26 @@
-Cuisine-ator
+**Cuisine-ator**
+
+
 Cuisine-ator is a React + TypeScript web app that helps users:
 
-Find recipes from available ingredients
-Generate recipe instructions with AI
-Find nearby stores where ingredients are sold
-Tech Stack
-React
-TypeScript
-Vite
-Express
-APIs
+- Find recipes from available ingredients
+
+- Generate recipe instructions with AI
+
+- Find nearby stores where ingredients are sold
+
+
+**Tech Stack**
+
+- React
+
+- TypeScript
+
+- Vite
+
+- Express
+
+**APIs**
 Spoonacular (recipe and ingredient search)
 Groq (AI recipe instructions)
 Kroger (nearby stores and ingredient availability)
