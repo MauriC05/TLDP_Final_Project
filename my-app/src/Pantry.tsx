@@ -2,7 +2,7 @@ import Navbar from './Navbar'
 
 function Pantry() {
   return (
-    <div>
+    <div style={{ marginTop: '80px'}}>
         <Navbar />
         <h1 style={{ fontFamily: '"Playwrite IE", cursive'}}>Your Ingredients Stored with Care</h1>
         <p style={{ fontFamily: '"Playwrite IE", cursive'}}>

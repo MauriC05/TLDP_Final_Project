@@ -13,30 +13,6 @@ createRoot(document.getElementById('root')!).render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/Ingredients" element={<Ingredients />} />
-      </Routes>
-    </BrowserRouter>
-  </StrictMode>,
-)
-
-
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/Ingredients" element={<Ingredients />} />
-        <Route path="/IngredientSearch" element={<IngredientSearch />} />
-      </Routes>
-    </BrowserRouter>
-  </StrictMode>,
-)
-
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/Ingredients" element={<Ingredients />} />
         <Route path="/IngredientSearch" element={<IngredientSearch />} />
         <Route path="/Pantry" element={<Pantry />} />
       </Routes>

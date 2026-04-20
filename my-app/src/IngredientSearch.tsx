@@ -2,7 +2,7 @@ import Navbar from './Navbar'
 
 function IngredientSearch() {
   return (
-    <div>
+    <div style={{ marginTop: '80px'}}>
         <Navbar />
         <h1 style={{ fontFamily: '"Playwrite IE", cursive'}}>Find Ingredients Near You</h1>
         <p style={{ fontFamily: '"Playwrite IE", cursive'}}>

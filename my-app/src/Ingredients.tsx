@@ -62,7 +62,7 @@ function Ingredients() {
   }
 
   return (
-    <div>
+    <div style={{ marginTop: '80px'}}>
       <Navbar />
       <h1 style={{ fontFamily: '"Playwrite IE", cursive' }}>Find My Next Recipe</h1>
       <p style={{ fontFamily: '"Playwrite IE", cursive' }}>
